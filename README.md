@@ -1,5 +1,21 @@
 # Passport-VKontakte
 
+## About this fork
+Temporary fix to work with @nestjs/passport.
+
+To install use yarn
+
+    $ yarn add ssh://git@github.com:ZVER3D/passport-vkontakte.git#master
+    
+validate method in VkontakteStrategy class should accept 5 params:
+
+```typescript
+validate(accessToken: string, refreshToken: string, params: Params, profile: Profile, done: any) {
+    // your code
+}
+```
+
+
 [![Build Status](https://secure.travis-ci.org/stevebest/passport-vkontakte.png)](http://travis-ci.org/stevebest/passport-vkontakte)
 
 [Passport](http://passportjs.org/) strategy for authenticating with [VK.com](http://www.vk.com/)
